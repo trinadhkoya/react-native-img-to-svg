@@ -5,16 +5,11 @@
  */
 
 import React, {Component} from 'react';
-import {
-    Platform,
-    StyleSheet,
-    Text,
-    View
-} from 'react-native';
-import AlarmIcon from "./assets/AlarmIcon";
-import Picture from "./assets/picture";
+import {Platform, ScrollView, StyleSheet, View} from 'react-native';
+import SvgUri from 'react-native-svg-uri';
+import BookingIco from "./assets/bookingIco";
+import Buffet from "./assets/buffet";
 
-console.disableYellowBox = true
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' +
@@ -30,8 +25,9 @@ export default class App extends Component<Props> {
     render() {
         return (
             <View style={styles.container}>
-                <AlarmIcon width={20} height={20} fill={'#000000'} stroke={2} viewBox={'0 0 22 22'}/>
-                <Picture width={20} height={20} fill={'#000000'} stroke={2} viewBox={'0 0 58 58'}/>
+                <BookingIco width={100} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}/>
+                <Buffet width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}/>
+
             </View>
         );
     }
