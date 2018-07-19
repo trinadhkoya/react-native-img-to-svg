@@ -18,6 +18,8 @@ import DesertIco from "./assets/desertIco";
 import GiftCardIco from "./assets/giftCardIco";
 import GiftCardIco2 from "./assets/giftCardIco2";
 import LiveMusicIco from "./assets/liveMusicIco";
+import Plate1Ico from "./assets/plate1Ico";
+import Plate2Ico from "./assets/plate2Ico";
 
 
 const instructions = Platform.select({
@@ -39,6 +41,10 @@ export default class App extends Component<Props> {
                               lightColor={'#6e56a4'}/>
                 <LiveMusicIco width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
                               lightColor={'#f48990'}/>
+                <Plate1Ico width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
+                              lightColor={'#f48990'}/>
+                <Plate2Ico width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
+                           lightColor={'#f48990'}/>
 
                 <ShoppinCartIco width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
                                 lightColor={'#f48990'}/>
