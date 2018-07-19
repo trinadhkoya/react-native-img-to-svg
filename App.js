@@ -21,6 +21,7 @@ import LiveMusicIco from "./assets/liveMusicIco";
 import Plate1Ico from "./assets/plate1Ico";
 import Plate2Ico from "./assets/plate2Ico";
 import OrdersIco from "./assets/ordersIco";
+import LogoutIco from "./assets/logOutIco";
 
 
 const instructions = Platform.select({
@@ -38,7 +39,8 @@ export default class App extends Component<Props> {
         return (
             <ScrollView>
 
-                <GiftCardIco2 width={150} height={100} fill={'#6e56a4'} stroke={2} viewBox={'0 0 58 58'}
+                <LogoutIco width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
+                              lightColor={'#f48990'}/><GiftCardIco2 width={150} height={100} fill={'#6e56a4'} stroke={2} viewBox={'0 0 58 58'}
                               lightColor={'#6e56a4'}/>
                 <LiveMusicIco width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
                               lightColor={'#f48990'}/>
