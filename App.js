@@ -14,6 +14,7 @@ import ComboIco from "./assets/comboIco";
 import ShoppinCartIco from "./assets/shoppingCart";
 import SupportIco from "./assets/supportIco";
 import ZcardIco from "./assets/zCardIco";
+import DesertIco from "./assets/desertIco";
 
 
 const instructions = Platform.select({
@@ -46,6 +47,8 @@ export default class App extends Component<Props> {
                             lightColor={'#f48990'}/>
                 <ZcardIco width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
                             lightColor={'#f48990'}/>
+                <DesertIco width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
+                          lightColor={'#f48990'}/>
 
 
             </ScrollView>
