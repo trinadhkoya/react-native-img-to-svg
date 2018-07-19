@@ -23,6 +23,7 @@ import Plate2Ico from "./assets/plate2Ico";
 import OrdersIco from "./assets/ordersIco";
 import LogoutIco from "./assets/logOutIco";
 import LuxuryIco from "./assets/luxuryIco";
+import NewInTownIco from "./assets/newInTownIco";
 
 
 const instructions = Platform.select({
@@ -47,6 +48,9 @@ export default class App extends Component<Props> {
                               lightColor={'#6e56a4'}/>
 
                 <LuxuryIco width={150} height={100} fill={'#eb3a42'} stroke={2}
+                              viewBox={'0 0 58 58'}
+                              lightColor={'#f48990'}/>
+                <NewInTownIco width={150} height={100} fill={'#eb3a42'} stroke={2}
                               viewBox={'0 0 58 58'}
                               lightColor={'#f48990'}/>
 
