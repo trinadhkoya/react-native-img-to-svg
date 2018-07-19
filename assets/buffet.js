@@ -16,9 +16,9 @@ class Buffet extends React.Component {
                 <G id="Layer_2" data-name="Layer 2">
                     <G id="Layer_1-2" data-name="Layer 1">
                         <Polygon className="cls-1" points="52.62 7.48 58.21 3.65 63.79 6.01 52.62 11.26 52.62 7.48"
-                                 fill={lightColor}/>
+                                fillOpacity={0.5} fill={lightColor}/>
                         <Polygon className="cls-2" points="52.21 35.08 43.5 28.54 53.04 22.83 61.75 29.38 52.21 35.08"
-                                 fill={lightColor}/>
+                                 fillOpacity={0.5} fill={lightColor}/>
                         <Path className="cls-3" fill={fill}
                               d="M36.5,30.84H3.69a1,1,0,0,1-1-1V25.68A15.76,15.76,0,0,1,18.44,9.93h3.31A15.76,15.76,0,0,1,37.5,25.68v4.16A1,1,0,0,1,36.5,30.84Zm-31.81-2H35.5V25.68A13.76,13.76,0,0,0,21.75,11.93H18.44A13.76,13.76,0,0,0,4.69,25.68Z"/>
                         <Path className="cls-3" fill={fill}
