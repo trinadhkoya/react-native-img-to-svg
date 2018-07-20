@@ -1,112 +1,193 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {Platform, ScrollView, StyleSheet} from 'react-native';
-import BookingIco from "./assets/bookingIco";
-import Buffet from "./assets/buffet";
-import Smily from "./assets/smily";
-import DiscountIco from "./assets/discount";
-import ComboIco from "./assets/comboIco";
-import ShoppinCartIco from "./assets/shoppingCart";
-import SupportIco from "./assets/supportIco";
-import ZcardIco from "./assets/zCardIco";
-import DesertIco from "./assets/desertIco";
-import GiftCardIco from "./assets/giftCardIco";
-import GiftCardIco2 from "./assets/giftCardIco2";
-import LiveMusicIco from "./assets/liveMusicIco";
-import Plate1Ico from "./assets/plate1Ico";
-import Plate2Ico from "./assets/plate2Ico";
-import OrdersIco from "./assets/ordersIco";
-import LogoutIco from "./assets/logOutIco";
-import LuxuryIco from "./assets/luxuryIco";
-import NewInTownIco from "./assets/newInTownIco";
+// import {NavigationActions} from 'react-navigation';
+import {Dimensions, Image, ListView, ScrollView, StyleSheet, Text, View} from 'react-native';
+import profileData from "./profile";
+import Ionicons from "react-native-vector-icons/Ionicons";
+
+const {height, width} = Dimensions.get('window');
+
+class App extends Component {
+
+    _renderRow = (rowData) => {
+        return (
+            <View style={styles.draerItemView}>
 
 
-const instructions = Platform.select({
-    ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-    android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+                <View style={[styles.drawerItem, {
+                    width: 44,
+                }]}>
+                    {rowData.iconData}
+                </View>
+                <View style={styles.drawerItem}>
+                    <Text style={styles.drawerItemText}>
+                        {rowData.name}
+                    </Text>
+                </View>
 
-type Props = {};
-export default class App extends Component<Props> {
 
-    // width, height, fill, stroke, viewBox, style
+            </View>
+        )
+    }
+
+    constructor(props) {
+        super(props)
+        const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+        this.state = {
+            dataSource: ds.cloneWithRows(profileData.data)
+        }
+    }
+
     render() {
         return (
-            <ScrollView>
+            <View style={[styles.container, {width: width - width / 5}]}>
+                {this._renderHeader()}
+                {this._renderSeperator()}
 
-                <LogoutIco width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
-                           lightColor={'#f48990'}/>
-                <GiftCardIco2 width={150} height={100} fill={'#6e56a4'} stroke={2}
-                              viewBox={'0 0 58 58'}
-                              lightColor={'#6e56a4'}/>
+                <ScrollView showsVerticalScrollIndicator={false}>
+                    <ListView
+                        contentContainerStyle={{justifyContent: 'center'}}
+                        enableEmptySections={true}
+                        dataSource={this.state.dataSource}
+                        renderRow={this._renderRow}
+                        removeClippedSubviews={false}
+                    />
+                </ScrollView>
+                {this._renderFooter()}
 
-                <LuxuryIco width={150} height={100} fill={'#eb3a42'} stroke={2}
-                              viewBox={'0 0 58 58'}
-                              lightColor={'#f48990'}/>
-                <NewInTownIco width={150} height={100} fill={'#eb3a42'} stroke={2}
-                              viewBox={'0 0 58 58'}
-                              lightColor={'#f48990'}/>
 
-                <LiveMusicIco width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
-                              lightColor={'#f48990'}/>
-                <Plate1Ico width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
-                           lightColor={'#f48990'}/>
-                <OrdersIco width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
-                           lightColor={'#f48990'}/>
-                <Plate2Ico width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
-                           lightColor={'#f48990'}/>
-
-                <ShoppinCartIco width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
-                                lightColor={'#f48990'}/>
-
-                <BookingIco width={100} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
-                            lightColor={'#f48990'}/>
-                <Buffet width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
-                        lightColor={'#f48990'}/>
-                <Smily width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
-                       lightColor={'#f48990'}/>
-                <DiscountIco width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
-                             lightColor={'#f48990'}/>
-                <ComboIco width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
-                          lightColor={'#f48990'}/>
-                <GiftCardIco width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
-                             lightColor={'#f48990'}/> <ShoppinCartIco width={150} height={100} fill={'#eb3a42'}
-                                                                      stroke={2} viewBox={'0 0 58 58'}
-                                                                      lightColor={'#f48990'}/>
-                <SupportIco width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
-                            lightColor={'#f48990'}/>
-                <ZcardIco width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
-                          lightColor={'#f48990'}/>
-                <DesertIco width={150} height={100} fill={'#eb3a42'} stroke={2} viewBox={'0 0 58 58'}
-                           lightColor={'#f48990'}/>
-
-            </ScrollView>
+            </View>
         );
+    }
+
+    _renderHeader() {
+        return (
+            <View>
+                <View>
+
+                    <View style={{justifyContent: 'flex-start', paddingHorizontal: 20}}>
+                        <Ionicons name='ios-close-circle' size={25} color={'#eb3a42'}/>
+                    </View>
+                </View>
+
+                <View style={styles.header}>
+                    <Image
+                        style={{width: 68, height: 68, borderRadius: 34}}
+                        source={{uri: 'https://avatars1.githubusercontent.com/u/9527766?s=460&v=4'}}
+                    />
+                    <View style={styles.draerItemView}>
+                        <Text style={styles.navItemStyle}>
+                            Trinadh Koya
+                        </Text>
+                    </View>
+                </View>
+            </View>
+        )
+    }
+
+    _renderSeperator() {
+        return (
+            <View style={styles.seperator}>
+            </View>
+        )
+
+    }
+
+    _renderFooter() {
+        return (
+            <View style={styles.footerContainer}>
+                <Text>Version</Text>
+            </View>
+        )
     }
 }
 
+App.propTypes = {
+    navigation: PropTypes.object
+};
+
 const styles = StyleSheet.create({
     container: {
+        paddingTop: 20,
         flex: 1,
-        justifyContent: 'center',
+        backgroundColor: '#fefefe'
+    },
+    navItemStyle: {
+        alignItems: "center",
+        justifyContent: "center",
         alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        alignSelf: 'center',
+        fontSize: 18,
+
     },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
+    draerItemView: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        alignContent: 'center',
+        paddingHorizontal: 25,
+        paddingVertical: 5
+
     },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
+    sectionHeadingStyle: {
+        paddingVertical: 10,
+        paddingHorizontal: 5
     },
+    footerContainer: {
+        padding: 20,
+    },
+    headerView: {
+        paddingVertical: 20,
+        alignItems: 'center'
+    },
+    drawerItem: {
+        alignContent: 'center',
+        height: 50
+    },
+    header: {
+        alignContent: 'center',
+        alignItems: 'center',
+        paddingTop: 25
+    },
+    userInfosHolder: {
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    avatar: {
+        width: 60,
+        height: 60,
+        borderRadius: 30
+    },
+    userInfos: {
+        height: 50,
+        justifyContent: 'center'
+    },
+    username: {
+        fontWeight: '700'
+    },
+    description: {
+        fontSize: 12,
+        color: '#000',
+        marginTop: 2
+    },
+    seperator: {
+        height: StyleSheet.hairlineWidth,
+        backgroundColor: '#CCC',
+        justifyContent: 'center',
+        marginVertical: 10,
+        marginHorizontal: 25,
+    },
+    drawerItem: {
+        alignItems: 'center',
+        alignContent: 'center',
+        height: 44,
+        justifyContent: 'center',
+    },
+    drawerItemText: {
+        paddingHorizontal: 10,
+        fontSize: 17,
+        alignSelf: 'flex-start'
+    }
+
+
 });
+export default App;
