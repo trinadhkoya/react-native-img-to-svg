@@ -13,55 +13,55 @@ const profileData = {
         {
             name: 'Restaurant Deals',
             description: '',
-            iconData: <Plate2Ico width={25} height={25}
+            iconData: <Plate2Ico width={24} height={24}
                                  fill={'#eb3a42'} strokeWidth={2} viewBox={'0 0 43.97 43.98'}
                                  lightColor={'#f48990'}/>
         },
         {
             name: 'Gift Card Deals',
             description: '',
-            iconData: <GiftCardIco2 width={25} height={25}
+            iconData: <GiftCardIco2 width={24} height={24}
                                     fill={'#eb3a42'} strokeWidth={2} viewBox={'0 0 53.69 40.81'}
                                     lightColor={'#f48990'}/>
         },
         {
             name: 'Manage Zaggle Card',
             description: 'Search, members, collections',
-            iconData: <ZcardIco width={25} height={25}
+            iconData: <ZcardIco width={24} height={24}
                                 fill={'#eb3a42'} strokeWidth={2} viewBox={'0 0 56.39 42.01'}
                                 lightColor={'#f48990'}/>
         },
         {
             name: 'Cart',
             description: '',
-            iconData: <ShoppinCartIco width={25} height={25}
+            iconData: <ShoppinCartIco width={24} height={24}
                                       fill={'#eb3a42'} strokeWidth={2} viewBox={'0 0 59.17 43.39'}
                                       lightColor={'#f48990'}/>
         },
         {
             name: 'My Orders',
             description: '',
-            iconData: <OrdersIco width={25} height={25}
+            iconData: <OrdersIco width={24} height={24}
                                  fill={'#eb3a42'} strokeWidth={2} viewBox={'0 0 41.54 42.01'}
                                  lightColor={'#f48990'}/>
         },
         {
             name: 'My Bookings',
             description: '',
-            iconData: <BookingIco width={25} height={25}
+            iconData: <BookingIco width={24} height={24}
                                   fill={'#eb3a42'} strokeWidth={2} viewBox={'0 0 41.54 44.18'}
                                   lightColor={'#f48990'}/>
         }, {
             name: 'Customer Support',
             description: '',
-            iconData: <SupportIco width={25} height={25}
+            iconData: <SupportIco width={24} height={24}
                                   fill={'#eb3a42'} strokeWidth={2} viewBox={'0 0 43.97 45.4'}
                                   lightColor={'#f48990'}/>
         },
         {
             name: 'Logout',
             description: '',
-            iconData: <LogoutIco width={25} height={25}
+            iconData: <LogoutIco width={24} height={24}
                                  fill={'#eb3a42'} strokeWidth={2} viewBox={'0 0 39 49.1'}
                                  lightColor={'#f48990'}/>
         }

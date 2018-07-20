@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     },
     drawerItemText: {
         paddingHorizontal: 10,
-        fontSize: 17,
+        fontSize: 15,
         alignSelf: 'flex-start'
     }
 
